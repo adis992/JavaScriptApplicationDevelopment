@@ -1,0 +1,9 @@
+<form (submit)="dodajKontakt()">
+    <label for="ime">Ime:</label>
+    <input type="text" id="ime" name="ime" [(ngModel)]="ime" required>
+
+    <label for="broj">Broj telefona:</label>
+    <input type="text" id="broj" name="broj" [(ngModel)]="brojTelefona" required>
+
+    <button type="submit">Sačuvaj</button>
+</form>

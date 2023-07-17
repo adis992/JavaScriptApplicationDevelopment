@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <button v-on:click="code = Math.random()">Generate code</button>
+        <p>{{ code }}</p>
+    </div>
+
+    <script src="vue.js"></script>
+    <script>
+
+        var vm = new Vue({
+            el: '#container',
+            data: {
+                code: 0
+            }
+        })
+
+    </script>
+</body>
+
+</html>

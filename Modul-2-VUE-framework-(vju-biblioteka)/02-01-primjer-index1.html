@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Templates</title>
+</head>
+
+<body>
+
+
+    <!--ovo je sablon -->
+    <div id="container">
+        <div>{{capitalizedName}}</div>
+        <!--  ovakav nacin se naziva interpolacija -->
+        <!--interpolacija je nacin na koji se podaci iz vue objekta prikazuju u html-u, ako kucamo u console vm.name "kskdsd" to ce se i promijeniti i to je int. -->
+        <div>{{email}}</div>
+    </div>
+
+
+    <script src="vue.js"></script>
+    <script>
+        //ZNACI VUE SE KORISTI SA V-DIRECTIVE, V-DIRECTIVE JE NACIN NA KOJI SE KORISTI VUE U HTML-U
+        //VUE SE KORISTI SA V-DIRECTIVE, V-DIRECTIVE JE NACIN NA KOJI SE KORISTI VUE U HTML-U
+        //V-ONCE UVIJEK IDE SA {{name}}, ZNACI DA SE SAMO JEDNOM PRIKAZE VRIJEDNOST I DA SE NE MOZE MIJENJATI U CONSOLE KAO V-TEXT
+        //V-HTML JE NACIN NA KOJI SE PRIKAZUJE HTML U VUE-U, ZNACI DA SE HTML KOD PRIKAZUJE KAO HTML KOD, A NE KAO TEKST
+            //V-BIND JE NACIN NA KOJI SE KORISTI VUE U HTML-U, V-BIND SLUZI ZA BINDANJE, ZNACI DA SE VRIJEDNOST U VUE OBJEKTU BINDA U HTML
+    </script>
+
+    <script>
+        var user = {
+            name: 'john Doe',
+            email: 'dfsdf@sdsd.com'
+        };
+
+        var vm = new Vue({
+            el: '#container',
+            data: user,
+            computed: {
+                capitalizedName: function () {
+                    return this.name.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

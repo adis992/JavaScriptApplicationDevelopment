@@ -1,0 +1,7 @@
+{
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "args": [
+        "-ExecutionPolicy",
+        "Bypass"
+    ],
+}

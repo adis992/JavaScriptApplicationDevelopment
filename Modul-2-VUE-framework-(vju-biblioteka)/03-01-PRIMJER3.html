@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <input v-model="name" placeholder="enter your name...">
+        <!-- v-model je DIREKTIVA- nacin na koji se koristi vue u html-u -->
+
+        <label for="favourite-color">Choose your favourite color:</label>
+        <select v-model="color" id="favourite-color">
+            <option>Maroon</option>
+            <option>Blue</option>
+            <option>Yellow</option>
+            <option>Magenta</option>
+        </select>
+
+        <div>
+            Your name: {{ name }}
+        </div>
+        <div>
+            Your favourite color: {{ color }}
+        </div>
+    </div>
+
+    <script src="vue.js"></script>
+    <script>
+        var data = {
+            name: "Ben Torrance",
+            color: "Blue"
+        };
+
+        var vm = new Vue({
+            el: '#container',
+            data: data
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <input type="checkbox" id="age" v-model="adult"> <label for="age">I am over 18 years old.</label>
+
+        <div v-if="adult">
+            Your are over 18 years old.
+        </div>
+        <div v-else>Oh no
+        </div>
+
+        <script src="vue.js"></script>
+        <script>
+            var data = {
+                name: "Ben Torrance",
+                adult: false
+            };
+
+            var vm = new Vue({
+                el: '#container',
+                data: data
+            })
+        </script>
+</body>
+
+</html>

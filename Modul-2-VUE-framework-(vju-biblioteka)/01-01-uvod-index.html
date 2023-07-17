@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUE INTRO</title>
+</head>
+
+<body>
+    <div id="container">
+        {{message}}
+        <!--  ovo je vue sintaksa(SABLON), ovo je data binding, znaci da se vrijednost message-a prikazuje u html-u -->
+    </div>
+    <script>
+
+        //vue.min je produkciona verzija vue-a, dok je vue.js development verzija vue-a
+        //vue.js je framework koji sluzi za kreiranje korisnickih sucelja
+        //vue je framework koji sluzi za kreiranje korisnickih sucelja
+
+    </script>
+    <script src="vue.js"></script>
+    <script>
+        var obj = { message: 'Hello World' };
+        //na ovaj nacin je obavljeno sastavljanje spajanje prezentacije i logike
+        var vm = new Vue({ //vm je skracenica za view model
+            el: '#container', //ovo je korijeni element el je skracenica za element, znaci da se view model spaja sa elementom koji ima id container
+            data: obj
+        });
+        //mogli smo napisati i ovako
+        // var vm = new Vue({
+        //     el: '#container',
+        //     data: {
+        //         message: 'Hello World'
+        //     }
+        // });
+
+
+        //MVVM je skracenica za model view view model A ON definise strukturu aplikacije i odnose izmedju komponenti aplikacije
+        //PRVO SMO DODALI VUE U PROJEKAT, PA SMO NAPRAVILI PREZENTACIJU U BODY I NAKON TOGA SMO NAPRAVILI LOGIKU U SCRIPT TAGU TJ VUE OBJEKT
+    </script>
+
+</body>
+
+</html>

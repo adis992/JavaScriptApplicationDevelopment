@@ -1,0 +1,4 @@
+<div *ngFor="let kontakt of kontakti" class="kontakt">
+    <div>{{ kontakt.ime }} - {{ kontakt.brojTelefona }}</div>
+    <button (click)="obrisiKontakt(kontakt)">Obriši</button>
+</div>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React - Simple integration</title>
+</head>
+
+<body>
+    <div id="container"></div>
+</body>
+
+<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+<script type="text/babel">
+    //react je samo biblioteka za kreiranje komponenti, a ne i za renderovanje na stranici 
+    //react elementi su samo javascript objekti koji opisuju sta ce se renderovati na stranici
+    class App extends React.Component {
+        render() {
+            return <div> Hello World</div>
+            //prvi parametar je tip elementa koji se kreira, drugi parametar su atributi, a treci parametar je sadrzaj elementa
+        }
+    }
+
+    ReactDOM.render(<App />, document.getElementById('container'))
+    //reactdom se dobija iz linka unpkg.com/react-dom kojeg smo nabavili preko cdn-a
+    //prvi parametar je komponenta koja se renderuje, a drugi parametar je element u koji se renderuje
+    //Babel prevodi JSX kod direktno u pozive React.createElement() metode.
+</script>
+
+</html>
